@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDB</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fira+Sans:wght@400;600&family=Poppins:wght@200;300;400&display=swap"
+    rel="stylesheet">
+    <script src="script.js" defer></script>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+            <div id="av">Avaliação de filmes</div>
+            <div id="menu-desktop">
+                <ul> 
+                    <li><a href="../inicio/index.html" id="inicio">Início</a></li>
+                    <li><a href="../cadastro/index.html" id="cadastro">Cadastrar</a></li>
+                    <li><a href="../visualização/index.html" id="vizualizar">Visualização</a></li>
+                </ul>
+            </div>
+
+            <div id="icone" onclick="menu()">
+                <img src="../inicio/icones/bars-solid.svg" id="img-icone" alt="">
+            </div>
+
+            <div id="menu-mobile">
+                <ul>
+                    <li><a href="../mostra_filmes/index.html" id="inicio">Início</a></li>
+                    <li><a href="../cadastra_filmes/index.html" id="cadastro">Cadastrar</a></li>
+                    <li><a href="" id="vizualizar">Visualização</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+      </header>
+      <main>
+        <div id="box1">
+          <div class="infoFilme">
+            <h2>Cadastro de filmes</h2>
+            <p>Informações do filme</p>
+            <label for="titulo">Título: </label>
+            <input type="text" id="titulo" placeholder="Insira o título" maxlength="100" /><br>
+
+            <label for="cod_filme">Código Filme:</label>
+            <input type="number" id="cod_filme" placeholder="Insira o código"/><br>
+
+            <label for="sinopse">Sinopse: </label>
+            <input type="text" id="sinopse" placeholder="Insira a sinopse"  maxlength="200"/><br>
+
+            <label for="datalanc">Data lançamento:</label>
+            <input type="date" id="datalanc" placeholder="Insira a data de lançamento"/><br>
+
+            <label for="classificacao">Classificação etária do filme:</label>
+            <select name="classificacao" id="opcao">
+                <option value="0">L</option>
+                <option value="1">10</option>
+                <option value="2">12</option>
+                <option value="3">14</option>
+                <option value="4">16</option>
+                <option value="5">18</option>
+            </select> <br>
+
+            <label for="duracao">Duração do filme:</label>
+            <input type="time" id="duracao" placeholder="Insira a duração" /><br>
+      
+            <button id="cadastrar" onclick="validar()">Cadastrar</button>
+
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
